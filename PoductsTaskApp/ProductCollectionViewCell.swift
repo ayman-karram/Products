@@ -19,8 +19,8 @@ class ProductCollectionViewCell :UICollectionViewCell {
   // MARK: init
   override func awakeFromNib() {
     super.awakeFromNib()
-    productDescription.textColor = UIColor.blackColor()
-    productDescription.font = UIFont(name:appFontStyleNormal , size: appFontSizeSmall)
+    productDescription.textColor = darkGrayTextColor
+    productDescription.font = UIFont(name:appFontStyleNormal , size: appFontSizeUltraSmall)
     productDescription.text  = ""
     productPrice.text = ""
   }

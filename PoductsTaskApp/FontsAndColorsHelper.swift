@@ -24,3 +24,4 @@ let appFontSizeUltraLarge: CGFloat = 24.0
 //MARK: Colors
 let darkNavigationBarColor = UIColor(red: 8.0/255.0, green: 63.0/255.0, blue: 102.0/255.0, alpha: 1)
 let productPriceBackgroundColor = UIColor(red: 8.0/255.0, green: 63.0/255.0, blue: 102.0/255.0, alpha: 0.7)
+let darkGrayTextColor = UIColor(red: 98.0/255.0, green: 98.0/255.0, blue: 98.0/255.0, alpha: 1)
