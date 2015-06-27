@@ -19,10 +19,10 @@
 		D32FAD401B33430500B4C2D7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FAD3F1B33430400B4C2D7 /* Product.swift */; };
 		D32FAD421B33489200B4C2D7 /* ProductWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FAD411B33489200B4C2D7 /* ProductWrapper.swift */; };
 		D32FAD461B334D9D00B4C2D7 /* LibraryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FAD451B334D9D00B4C2D7 /* LibraryApi.swift */; };
+		D34FE53C1B3EE1C30021EE38 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FE53B1B3EE1C30021EE38 /* CollectionViewWaterfallLayout.swift */; };
 		D3B69FC01B33A3FB005DF351 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B69FBF1B33A3FB005DF351 /* ProductCollectionViewCell.swift */; };
 		D3B69FC11B344C5D005DF351 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32FAD371B33415000B4C2D7 /* SwiftyJSON.framework */; };
 		D3B69FC21B344C5D005DF351 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D32FAD371B33415000B4C2D7 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D3F7B53F1B3513C800FE8DE4 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B53E1B3513C800FE8DE4 /* CollectionViewWaterfallLayout.swift */; };
 		D3F7B5511B37627900FE8DE4 /* ProductPriceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B5501B37627800FE8DE4 /* ProductPriceLabel.swift */; };
 		D3F7B55D1B38B9BC00FE8DE4 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3F7B55C1B38B9BC00FE8DE4 /* ProductCell.xib */; };
 /* End PBXBuildFile section */
@@ -139,8 +139,8 @@
 		D32FAD3F1B33430400B4C2D7 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D32FAD411B33489200B4C2D7 /* ProductWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductWrapper.swift; sourceTree = "<group>"; };
 		D32FAD451B334D9D00B4C2D7 /* LibraryApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryApi.swift; sourceTree = "<group>"; };
+		D34FE53B1B3EE1C30021EE38 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewWaterfallLayout.swift; path = ../../../CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
 		D3B69FBF1B33A3FB005DF351 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
-		D3F7B53E1B3513C800FE8DE4 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewWaterfallLayout.swift; path = "../../../../../../Downloads/CollectionViewWaterfallLayout-master/CollectionViewWaterfallLayout.swift"; sourceTree = "<group>"; };
 		D3F7B5501B37627800FE8DE4 /* ProductPriceLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductPriceLabel.swift; sourceTree = "<group>"; };
 		D3F7B55C1B38B9BC00FE8DE4 /* ProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -257,7 +257,7 @@
 		D32FAD2E1B331F7300B4C2D7 /* Libaray */ = {
 			isa = PBXGroup;
 			children = (
-				D3F7B53E1B3513C800FE8DE4 /* CollectionViewWaterfallLayout.swift */,
+				D34FE53B1B3EE1C30021EE38 /* CollectionViewWaterfallLayout.swift */,
 				D32FAD2F1B33415000B4C2D7 /* SwiftyJSON.xcodeproj */,
 				D32FAD171B331E7B00B4C2D7 /* Alamofire.xcodeproj */,
 			);
@@ -485,8 +485,8 @@
 			files = (
 				D32FAD2D1B331EE200B4C2D7 /* ProductsCollectionViewController.swift in Sources */,
 				D32FAD461B334D9D00B4C2D7 /* LibraryApi.swift in Sources */,
+				D34FE53C1B3EE1C30021EE38 /* CollectionViewWaterfallLayout.swift in Sources */,
 				D32FAD421B33489200B4C2D7 /* ProductWrapper.swift in Sources */,
-				D3F7B53F1B3513C800FE8DE4 /* CollectionViewWaterfallLayout.swift in Sources */,
 				D32FACF81B331E3700B4C2D7 /* AppDelegate.swift in Sources */,
 				D3B69FC01B33A3FB005DF351 /* ProductCollectionViewCell.swift in Sources */,
 				D3F7B5511B37627900FE8DE4 /* ProductPriceLabel.swift in Sources */,
