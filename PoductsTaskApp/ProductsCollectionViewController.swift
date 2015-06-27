@@ -16,6 +16,7 @@ class ProductsCollectionViewController: UIViewController {
   // MARK: Instance Variables
   @IBOutlet weak var productCollectionView: UICollectionView!
   @IBOutlet weak var productActivityIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var productActivityTopConstraint: NSLayoutConstraint!
   
   var productCellNib :UINib!
   var allProductsArray :[Product]
@@ -25,6 +26,7 @@ class ProductsCollectionViewController: UIViewController {
   var AlertMessage :String!
   let productsCountPerPage :Double!
   let productCellIdentifier :String!
+  
   // using custum waterfallLayout to collectionview layout
   let productCollectionViewLayout : CollectionViewWaterfallLayout!
   
@@ -35,7 +37,7 @@ class ProductsCollectionViewController: UIViewController {
     fromProductId = 0.0
     AlertTitle = ""
     AlertMessage = ""
-    productsCountPerPage = 10.0
+    productsCountPerPage = 20.0
     productCellIdentifier = "ProductCell"
     productCollectionViewLayout = CollectionViewWaterfallLayout()
     productCollectionViewLayout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -71,16 +73,10 @@ class ProductsCollectionViewController: UIViewController {
             self.allProductsArray.append(ProductWapper.WrapeJsonToProduct(jsonObj))
           }
           
-          for var i = Int (self.fromProductId) ; i < self.allProductsArray.count ; i++ {
-            let product = self.allProductsArray[i]
-            let indexPath = NSIndexPath(forRow: i, inSection: 0)
-            self.getImagesWithUrl(product.imageUrl,indexPath : indexPath)
-          }
-          
+          self.productCollectionView.reloadData()
           let lastProductIndex  = self.allProductsArray.count - 1
           let startProductId   = self.allProductsArray[lastProductIndex].id + 1
           self.fromProductId = startProductId
-          self.productCollectionView.reloadData()
         } // end of else
         } //end of compeletion handler
       )// end of function call
@@ -88,21 +84,6 @@ class ProductsCollectionViewController: UIViewController {
       self.AlertMessage = "No internet Connection "
       self.createAlertWithDismissButton(self.AlertTitle , message: self.AlertMessage)
     }
-  }
-  
-  func getImagesWithUrl (imageUrl :String , indexPath : NSIndexPath) {
-    LibraryApi.sharedInstance.getProductImageWithUrl(imageUrl, completionHandler: { responseObject, data, error in
-      if (data != nil) {
-        if let imageResponse = UIImage(data: data as! NSData) {
-          self.imageCache[imageUrl] = imageResponse
-          self.productCollectionView.reloadItemsAtIndexPaths([indexPath])
-        }
-        
-      } else {
-        println(error)
-      } // end of else
-      } //end of compeletion handler
-    ) // end of function call
   }
   
   // MARK: Helper Methods
@@ -131,7 +112,24 @@ extension ProductsCollectionViewController :UICollectionViewDataSource,UICollect
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     
     let productCell: ProductCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(productCellIdentifier, forIndexPath: indexPath) as! ProductCollectionViewCell
+    
     let product = self.allProductsArray[indexPath.row]
+    if var image = self.imageCache[product.imageUrl]  {
+      productCell.productImage.image = image
+    } else {
+      LibraryApi.sharedInstance.getProductImageWithUrl(product.imageUrl, completionHandler: { responseObject, data, error in
+        if (data != nil) {
+          if let imageResponse = UIImage(data: data as! NSData) {
+            self.imageCache[product.imageUrl] = imageResponse
+            productCell.productImage.image = imageResponse
+          }
+          
+        } else {
+          println(error)
+        } // end of else
+        } //end of compeletion handler
+      )
+    }
     self.configureProductCell(productCell, product: product)
     
     return productCell
@@ -147,6 +145,7 @@ extension ProductsCollectionViewController :UICollectionViewDataSource,UICollect
   // MARK: Collection View Delegate
   func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
     if (indexPath.row == self.allProductsArray.count - 1) {
+      productActivityTopConstraint.constant = self.view.frame.height - 95
       self.loadProducts()
     }
   }
@@ -181,9 +180,6 @@ extension ProductsCollectionViewController :UICollectionViewDataSource,UICollect
     productCell.productPrice.text = "$" + String(format:"%i",  product.price)
     productCell.productDescription.text = product.productDescription
     let imageUrl = product.imageUrl
-    if var image = self.imageCache[imageUrl]  {
-      productCell.productImage.image = image
-    }
     return productCell
   }
   

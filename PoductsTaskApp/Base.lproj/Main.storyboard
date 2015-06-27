@@ -38,11 +38,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GfC-bM-36g" secondAttribute="trailing" id="BFS-Ma-rU4"/>
-                            <constraint firstAttribute="centerY" secondItem="fBP-3N-pQ6" secondAttribute="centerY" id="HCp-LG-yuf"/>
                             <constraint firstItem="GfC-bM-36g" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hMO-ib-Gq1"/>
                             <constraint firstItem="GfC-bM-36g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iaa-Dw-NXC"/>
                             <constraint firstAttribute="centerX" secondItem="fBP-3N-pQ6" secondAttribute="centerX" id="m2A-CQ-pfU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GfC-bM-36g" secondAttribute="bottom" id="pKc-gh-YOY"/>
+                            <constraint firstItem="fBP-3N-pQ6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="210" id="tjJ-56-6vn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xh2-gM-ETi"/>
@@ -50,6 +50,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="productActivityIndicator" destination="fBP-3N-pQ6" id="3gV-e5-XgK"/>
+                        <outlet property="productActivityTopConstraint" destination="tjJ-56-6vn" id="GW5-Nh-Ewl"/>
                         <outlet property="productCollectionView" destination="GfC-bM-36g" id="p3e-V7-o7P"/>
                     </connections>
                 </viewController>
