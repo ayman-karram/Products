@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7984DDFD6A5AD1BF18F88F78"
+               BlueprintIdentifier = "663991B3F029DD61372822B0"
                BuildableName = "Pods_ProductsTaskApp.framework"
                BlueprintName = "Pods-ProductsTaskApp"
                ReferencedContainer = "container:Pods.xcodeproj">

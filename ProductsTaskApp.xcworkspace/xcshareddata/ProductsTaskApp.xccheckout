@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>AB79C1F8-2022-4517-8F8E-ABC031F1AF32</string>
+	<string>327B54CA-2FDE-4A93-BDDC-D3E6D7EA0D84</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ProductsTaskApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>77AEE5DD29E6F78862093276CC36B44F113A51C9</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ProductsTaskApp</string>
+			<string>Products-using-CocaPods</string>
 		</dict>
 	</array>
 </dict>

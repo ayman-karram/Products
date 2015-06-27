@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B5D44DAD3851E857AC5FE410 /* Pods_ProductsTaskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11E4598E7E0BBD4CE64BF607 /* Pods_ProductsTaskApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D3016F781B3EECE4009E0D84 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3016F771B3EECE4009E0D84 /* CollectionViewWaterfallLayout.swift */; };
 		D30BF31A1B3D72DF0080D25C /* FontsAndColorsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30BF3191B3D72DF0080D25C /* FontsAndColorsHelper.swift */; };
 		D32FACF81B331E3700B4C2D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FACF71B331E3700B4C2D7 /* AppDelegate.swift */; };
 		D32FACFD1B331E3700B4C2D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32FACFB1B331E3700B4C2D7 /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		D32FAD421B33489200B4C2D7 /* ProductWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FAD411B33489200B4C2D7 /* ProductWrapper.swift */; };
 		D32FAD461B334D9D00B4C2D7 /* LibraryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FAD451B334D9D00B4C2D7 /* LibraryApi.swift */; };
 		D3B69FC01B33A3FB005DF351 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B69FBF1B33A3FB005DF351 /* ProductCollectionViewCell.swift */; };
-		D3F7B53F1B3513C800FE8DE4 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B53E1B3513C800FE8DE4 /* CollectionViewWaterfallLayout.swift */; };
 		D3F7B5511B37627900FE8DE4 /* ProductPriceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B5501B37627800FE8DE4 /* ProductPriceLabel.swift */; };
 		D3F7B55D1B38B9BC00FE8DE4 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3F7B55C1B38B9BC00FE8DE4 /* ProductCell.xib */; };
 /* End PBXBuildFile section */
@@ -50,6 +50,7 @@
 /* Begin PBXFileReference section */
 		11E4598E7E0BBD4CE64BF607 /* Pods_ProductsTaskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductsTaskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CC44F44C2AF2A45071A4A6 /* Pods-ProductsTaskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductsTaskApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductsTaskApp/Pods-ProductsTaskApp.release.xcconfig"; sourceTree = "<group>"; };
+		D3016F771B3EECE4009E0D84 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
 		D30BF3191B3D72DF0080D25C /* FontsAndColorsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsAndColorsHelper.swift; sourceTree = "<group>"; };
 		D32FACF21B331E3700B4C2D7 /* ProductsTaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductsTaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32FACF61B331E3700B4C2D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		D32FAD411B33489200B4C2D7 /* ProductWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductWrapper.swift; sourceTree = "<group>"; };
 		D32FAD451B334D9D00B4C2D7 /* LibraryApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryApi.swift; sourceTree = "<group>"; };
 		D3B69FBF1B33A3FB005DF351 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
-		D3F7B53E1B3513C800FE8DE4 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewWaterfallLayout.swift; path = "../../../../../../Downloads/CollectionViewWaterfallLayout-master/CollectionViewWaterfallLayout.swift"; sourceTree = "<group>"; };
 		D3F7B5501B37627800FE8DE4 /* ProductPriceLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductPriceLabel.swift; sourceTree = "<group>"; };
 		D3F7B55C1B38B9BC00FE8DE4 /* ProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		E35E60D2C121264438A60CC0 /* Pods-ProductsTaskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductsTaskApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductsTaskApp/Pods-ProductsTaskApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 		D32FAD2E1B331F7300B4C2D7 /* Libaray */ = {
 			isa = PBXGroup;
 			children = (
-				D3F7B53E1B3513C800FE8DE4 /* CollectionViewWaterfallLayout.swift */,
+				D3016F771B3EECE4009E0D84 /* CollectionViewWaterfallLayout.swift */,
 			);
 			name = Libaray;
 			sourceTree = "<group>";
@@ -385,8 +385,8 @@
 			files = (
 				D32FAD2D1B331EE200B4C2D7 /* ProductsCollectionViewController.swift in Sources */,
 				D32FAD461B334D9D00B4C2D7 /* LibraryApi.swift in Sources */,
+				D3016F781B3EECE4009E0D84 /* CollectionViewWaterfallLayout.swift in Sources */,
 				D32FAD421B33489200B4C2D7 /* ProductWrapper.swift in Sources */,
-				D3F7B53F1B3513C800FE8DE4 /* CollectionViewWaterfallLayout.swift in Sources */,
 				D32FACF81B331E3700B4C2D7 /* AppDelegate.swift in Sources */,
 				D3B69FC01B33A3FB005DF351 /* ProductCollectionViewCell.swift in Sources */,
 				D3F7B5511B37627900FE8DE4 /* ProductPriceLabel.swift in Sources */,
