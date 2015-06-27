@@ -1,8 +1,6 @@
 # Products
 
-Run Products using cocaPods (terminal commands)
-
-rm -rf ProductsTaskApp.xcworkspace 
+Run Products using cocaPods (terminal command)
 
 pod install
 
