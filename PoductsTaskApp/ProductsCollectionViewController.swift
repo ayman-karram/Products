@@ -102,10 +102,12 @@ extension ProductsCollectionViewController :UICollectionViewDataSource,UICollect
   
   // MARK: Collection View Data Source
   func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    
     return 1
   }
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
     return allProductsArray.count
   }
   
@@ -146,6 +148,7 @@ extension ProductsCollectionViewController :UICollectionViewDataSource,UICollect
   func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
     if (indexPath.row == self.allProductsArray.count - 1) {
       productActivityTopConstraint.constant = self.view.frame.height - 95
+      // load more products
       self.loadProducts()
     }
   }
@@ -158,7 +161,6 @@ extension ProductsCollectionViewController :UICollectionViewDataSource,UICollect
   
   // MARK: Size Method
   func calculateHeightForConfiguredSizingCell(indexPath :NSIndexPath) -> CGSize {
-    
     // Use fake cell to calculate height
     let reuseIdentifier = productCellIdentifier
     var cell: ProductCollectionViewCell?

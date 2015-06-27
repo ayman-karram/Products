@@ -20,7 +20,7 @@ class ProductPriceLabel: UILabel {
     self.layer.cornerRadius = 4
     self.clipsToBounds = true
   }
-
+  
   // MARK: View Lifecycle
   override func drawTextInRect(rect: CGRect) {
     var edgeInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
@@ -31,7 +31,7 @@ class ProductPriceLabel: UILabel {
     var intrinsicSuperViewContentSize = super.intrinsicContentSize()
     intrinsicSuperViewContentSize.height += 10
     intrinsicSuperViewContentSize.width += 20
-
+    
     return intrinsicSuperViewContentSize
   }
 }
